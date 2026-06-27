@@ -1,0 +1,46 @@
+# .gitignore for .NET backend + static UI
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# VS/IDE settings
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+packages/
+.project.assets.json
+.project.nuget.cache
+.nuget/
+
+# Secrets & config
+appsettings.*.json
+secrets/
+*.db
+
+# Front‑end artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Uploaded / generated assets
+uploads/
+wwwroot/
+/dist/
+/build/
+
+# Temp / OS files
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store

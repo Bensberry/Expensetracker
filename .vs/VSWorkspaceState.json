@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Data",
+    "\\Models",
+    "\\Services",
+    "\\tessdata"
+  ],
+  "SelectedNode": "\\Controllers\\ExpenseController.cs",
+  "PreviewInSolutionExplorer": false
+}
