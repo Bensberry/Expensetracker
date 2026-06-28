@@ -66,7 +66,17 @@ public class ExpenseController : ControllerBase
         return CreatedAtAction(nameof(GetExpense), new { id = expense.Id }, expense);
     }
 
-// PUT endpoint removed per user request
+    // DELETE: api/expense/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteExpense(int id)
+    {
+        var userId = GetUserId();
+        var expense = await _context.Expenses.FirstOrDefaultAsync(e => e.Id == id && e.UserId == userId);
+        if (expense == null)
+            return NotFound();
 
-// DELETE endpoint removed per user request
+        _context.Expenses.Remove(expense);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
 }

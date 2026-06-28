@@ -1,46 +1,45 @@
-# .gitignore for .NET backend + static UI
-# Build artifacts
-bin/
+## .NET Core / ASP.NET
 obj/
-*.dll
-*.exe
-*.pdb
-
-# VS/IDE settings
-.vscode/
-.idea/
-*.suo
+bin/
 *.user
+*.suo
 *.userosscache
 *.sln.docstates
+.vs/
+
+# Secret / environment files — NEVER commit these
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json
+
+# User-specific files
+*.rsuser
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
 
 # NuGet
 *.nupkg
-packages/
-.project.assets.json
-.project.nuget.cache
+*.snupkg
 .nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
 
-# Secrets & config
-appsettings.*.json
-secrets/
-*.db
+# Published output
+**/publish/
 
-# Front‑end artifacts
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# Uploaded / generated assets
+# Uploads / user-generated content
 uploads/
-wwwroot/
-/dist/
-/build/
 
-# Temp / OS files
-*.tmp
-*.bak
-Thumbs.db
+# OS files
 .DS_Store
+Thumbs.db
+desktop.ini
